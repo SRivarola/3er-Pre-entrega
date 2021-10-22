@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"   integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>GreenHouse</title>
+</head>
+<body>
+  <header>
+    <nav class="barraMenu navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid menu">
+        <a class="navbar-brand marca" href="#"> GH </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#productosVarios">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./empresas.html">Empresas</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="imgCarrito" src="./multimedia/cart.png" alt="carrito de compras">
+                <span id="contador"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-ligth" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li class="dropdown-item">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">PRODUCTO</th>
+                        <th scope="col">PRECIO</th>
+                        <th scope="col">Eliminar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th class="textoTabla">Subtotal:</td>
+                        <th class="subtotal"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th class="textoTabla">TOTAL:</td>
+                        <th class="total"></td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </li>
+                <li><button id="comprar" type="button" class="btn btn-danger">Procesar Compra</button></li>
+                <li><button id="vaciarCarrito" type="button" class="btn btn-success btn-sm">Vaciar carrito</button</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="logo">
+    <p class="techoCasa">︿</p>
+    <h1>GreenHouse</h1>
+    <h2>Hacé  de  tu  casa  un  HOGA<span>R</span></h2>
+  </section>
+  <section class="fotosIndex">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active foto1"></div>
+        <div class="carousel-item foto2"></div>
+        <div class="carousel-item foto3"></div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <br><br>
+  <main class="mainIndex">
+    <br>
+    <h3>MEGA SALE! Hasta <span>40% OFF</span></h3>
+    <section class="megaSale">
+      <div class="descuento">
+        <p class="mega">MEGA</p>
+        <p class="sale">SALE</p>
+        <p class="hasta">HASTA</p>
+        <p class="dieciocho">18</p>
+        <p class="sinInteres">Sin Interés</p>
+      </div>
+      <a class="linkProducto" href="">
+        <div class="card" style="width: 18rem;">
+          <img src="./multimedia/licuadora.jpg" class="card-img-top" alt="licuadora">
+          <p class="textoFoto">Licuadora Phillips</p>
+          <div class="descripcion">
+            <p class="textoDescripcion"><span class="antes">$800 </span><span class="ahora">  $520</span><span class="porcentaje">35% OFF</span></p>
+            <p class="masIva">+ IVA</p>
+            <p class="cuotas"><span>8x$65  </span>SIN INTERÉS</p>
+          </div>
+        </div>
+      </a>
+      <a class="linkProducto" href="">
+        <div class="card" style="width: 18rem;">
+          <img src="./multimedia/microondas.jpg" class="card-img-top" alt="licuadora">
+          <p class="textoFoto">Microondas Whirpool</p>
+          <div class="descripcion">
+            <p class="textoDescripcion"><span class="antes">$8000 </span><span class="ahora">  $4400</span><span class="porcentaje2">45% OFF</span></p>
+            <p class="masIvaDos">+ IVA</p>
+            <p class="cuotas"><span>18x$244.44  </span>SIN INTERÉS</p>
+          </div>
+        </div>
+      </a>
+      <a class="linkProducto" href="">
+        <div class="card" style="width: 18rem;">
+          <img src="./multimedia/minipimer.jpg" class="card-img-top" alt="licuadora">
+          <p class="textoFoto">Minipimer Phillips</p>
+          <div class="descripcion">
+            <p class="textoDescripcion"><span class="antes">$6000 </span><span class="ahora">  $3600</span><span class="porcentaje2">40% OFF</span></p>
+            <p class="masIvaDos">+ IVA</p>
+            <p class="cuotas"><span>12x$300  </span>SIN INTERÉS</p>
+          </div>
+        </div>
+      </a>
+    </section>
+  </main>
+  <section id="productosVarios">
+    <br><br><br><br>
+    <form class="row g-2 formBuscador">
+      <div class="col-md-10">
+        <input id="busqueda" type="text" class="form-control" id="validationDefault01" placeholder="Buscar por nombre" required>
+      </div>        
+      <div class="col-md-2">
+        <button id="btnBuscar" class="btn btn-primary botonBuscar" type="submit">BUSCAR</button>
+      </div>      
+    </form>
+    <div class="productosVarios">
+      <div class="barraLateral">
+        <div class="titulo">
+          <b>Productos:</b>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="todos">
+          <label class="form-check-label" for="flexRadioDefault1">Todos</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="microondas">
+          <label class="form-check-label" for="flexRadioDefault2">Microondas</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="licuadora">
+          <label class="form-check-label" for="flexRadioDefault3">Licuadoras</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="procesadora">
+          <label class="form-check-label" for="flexRadioDefault4">Procesadoras</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" value="secadora">
+          <label class="form-check-label" for="flexRadioDefault5">Secadoras de pelo</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" value="cortabarba">
+          <label class="form-check-label" for="flexRadioDefault6">Cortabarba</label>
+        </div>
+        <div>
+          <button id="btnFiltrar" class="btn btn-primary botonForm" type="submit">Filtrar</button>
+        </div>
+      </div>
+      <div class="productos">
+        <div class="card microondas phillips" style="width: 18rem;">
+          <p class="tituloFoto">Microondas Phillips</p>
+          <img src="./multimedia/microondas00.jpg" class="card-img-top" alt="microondas">           
+          <div class="descripcion">
+            <p class="textoDescripcion">15000 + IVA</p>
+            <button id="card microondas phillips" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card microondas lg" style="width: 18rem;">
+          <p class="tituloFoto">Microondas LG</p>
+          <img src="./multimedia/microondas01.jpg" class="card-img-top" alt="microondas">           
+          <div class="descripcion">
+            <p class="textoDescripcion">40000 + IVA</p>
+            <button id="card microondas lg" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card microondas whirlpool" style="width: 18rem;">
+          <p class="tituloFoto">Microondas Whirlpool</p>
+          <img src="./multimedia/microondas02.jpg" class="card-img-top" alt="microondas">           
+          <div class="descripcion">
+            <p class="textoDescripcion">20000 + IVA</p>
+            <button id="card microondas whirlpool" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card microondas rca" style="width: 18rem;">
+          <p class="tituloFoto">Microondas RCA</p>
+          <img src="./multimedia/microondas03.jpg" class="card-img-top" alt="microondas">           
+          <div class="descripcion">
+            <p class="textoDescripcion">28000 + IVA</p>
+            <button id="card microondas rca" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card licuadora oster" style="width: 18rem;">
+          <p class="tituloFoto">Licuadora Oster</p>
+          <img src="./multimedia/licuadora00.jpg" class="card-img-top" alt="licuadora">  
+          <div class="descripcion">
+            <p class="textoDescripcion">7000 + IVA</p>
+            <button id="card licuadora oster" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card licuadora oster dos" style="width: 18rem;">
+          <p class="tituloFoto">Licuadora Oster</p>
+          <img src="./multimedia/licuadora01.jpg" class="card-img-top" alt="licuadora">  
+          <div class="descripcion">
+            <p class="textoDescripcion">7800 + IVA</p>
+            <button id="card licuadora oster dos" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card licuadora ventaimportacion" style="width: 18rem;">
+          <p class="tituloFoto">Licuadora VentaImportacion</p>
+          <img src="./multimedia/licuadora02.jpg" class="card-img-top" alt="licuadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">6000 + IVA</p>
+            <button id="card licuadora ventaimportacion" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card licuadora liliana" style="width: 18rem;">
+          <p class="tituloFoto">Licuadora Liliana</p>
+          <img src="./multimedia/licuadora03.jpg" class="card-img-top" alt="licuadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">9000 + IVA</p>
+            <button id="card licuadora liliana" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card procesadora liliana" style="width: 18rem;">
+          <p class="tituloFoto">Procesadora Liliana</p>
+          <img src="./multimedia/procesadora00.jpg" class="card-img-top" alt="procesadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">7000 + IVA</p>
+            <button id="card licuadora liliana" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card procesadora winco" style="width: 18rem;">
+          <p class="tituloFoto">Procesadora Winco</p>
+          <img src="./multimedia/procesadora01.jpg" class="card-img-top" alt="procesadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">4500 + IVA</p>
+            <button id="card procesadora winco" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card procesadora liliana dos" style="width: 18rem;">
+          <p class="tituloFoto">Procesadora Liliana</p>
+          <img src="./multimedia/procesadora02.jpg" class="card-img-top" alt="procesadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">6500 + IVA</p>
+            <button id="card procesadora liliana dos" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card procesadora liliana tres" style="width: 18rem;">
+          <p class="tituloFoto">Procesadora Liliana</p>
+          <img src="./multimedia/procesadora03.jpg" class="card-img-top" alt="procesadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">6500 + IVA</p>
+            <button id="card procesadora liliana tres" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card secadora phillips" style="width: 18rem;">
+          <p class="tituloFoto">Secadora Phillips</p>
+          <img src="./multimedia/secadora00.jpg" class="card-img-top" alt="secadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">7500 + IVA</p>
+            <button id="card secadora phillips" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card secadora gama" style="width: 18rem;">
+          <p class="tituloFoto">Secadora GAMA</p>
+          <img src="./multimedia/secadora01.jpg" class="card-img-top" alt="secadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">5200 + IVA</p>
+            <button id="card secadora gama" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card secadora gama dos" style="width: 18rem;">
+          <p class="tituloFoto">Secadora GAMA</p>
+          <img src="./multimedia/secadora02.jpg" class="card-img-top" alt="secadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">5500 + IVA</p>
+            <button id="card secadora gama dos" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card secadora revlon" style="width: 18rem;">
+          <p class="tituloFoto">Secadora REVLON</p>
+          <img src="./multimedia/secadora03.png" class="card-img-top" alt="secadora">           
+          <div class="descripcion">
+            <p class="textoDescripcion">4300 + IVA</p>
+            <button id="card secadora revlon" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card cortabarba ducati" style="width: 18rem;">
+          <p class="tituloFoto">Cortabarba Ducati</p>
+          <img src="./multimedia/cortabarba00.jpg" class="card-img-top" alt="cortabarba">           
+          <div class="descripcion">
+            <p class="textoDescripcion">3800 + IVA</p>
+            <button id="card cortabarba ducati" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card cortabarba phillips" style="width: 18rem;">
+          <p class="tituloFoto">Cortabarba Phillips</p>
+          <img src="./multimedia/cortabarba01.png" class="card-img-top" alt="cortabarba">           
+          <div class="descripcion">
+            <p class="textoDescripcion">1900 + IVA</p>
+            <button id="card cortabarba phillips" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card cortabarba phillips dos" style="width: 18rem;">
+          <p class="tituloFoto">Cortabarba Phillips</p>
+          <img src="./multimedia/cortabarba02.png" class="card-img-top" alt="cortabarba">           
+          <div class="descripcion">
+            <p class="textoDescripcion">2200 + IVA</p>
+            <button id="card cortabarba phillips dos" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+        <div class="card cortabarba remington" style="width: 18rem;">
+          <p class="tituloFoto">Cortabarba Remington</p>
+          <img src="./multimedia/cortabarba03.jpg" class="card-img-top" alt="cortabarba">           
+          <div class="descripcion">
+            <p class="textoDescripcion">4000 + IVA</p>
+            <button id="card cortabarba remington" class="btn btn-primary botonAgregar" type="submit">AGREGAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src='./js/main.js'></script>
+</body>
+</html>

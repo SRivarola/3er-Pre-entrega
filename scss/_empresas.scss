@@ -1,0 +1,77 @@
+.mainEmpresas{
+    height: auto;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #dbdbdb;
+    h3{
+        color: #000000;
+        margin-left: 20px;
+    }
+    .formulario{
+        width: 90%;
+        margin-left: 20px;
+        .botonForm{
+            background-color: #66ff00;
+            color: black;
+            border: none;
+        }
+    }
+    .formulario2{
+        width: 90%;
+        margin-left: 20px;
+        margin-top: 20px;
+        .botonForm{
+            background-color: #66ff00;
+            color: black;
+            border: none;
+        }
+    }
+    #empresa{
+        .tituloEmpresa{
+            color: black;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: 200px;
+        }
+        .textoForm{
+            font-size: 18px;
+            color: black;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
+    }
+    #productosPorEmpresa{
+        width: 90%;
+        height: auto;
+        background-color: #dbdbdb;
+        color: #000000;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        h1{
+            text-align: center;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+        .tarjeta{
+            width: 42vw;
+            margin: 15px;
+            border: #4d4646 1px solid;
+            .costoBajo{
+                background-color: #00d60b;
+            }
+            .costoMedio{
+                background-color: #eeff00;
+            }
+            .costoAlto{
+                background-color: #ec0909;
+            }
+        }
+    }
+}

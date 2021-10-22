@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+@font-face {
+    font-family: LatamSans;
+    src: url(Fuentes/LatamSans-Regular.otf);
+}
+body{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: LatamSans;
+}
+@import "nav";
+@import "index";
+@import "empresas";
