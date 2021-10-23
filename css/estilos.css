@@ -24,6 +24,12 @@ header .barraMenu {
     border: #000000 2px solid;
     padding-left: 5px;
     padding-right: 5px; }
+  header .barraMenu .marca2 {
+    font-size: 40px;
+    margin: 0 auto;
+    border: #000000 2px solid;
+    padding-left: 5px;
+    padding-right: 5px; }
   header .barraMenu #btnEmpresas {
     color: #000000; }
   header .barraMenu .dropdown .imgCarrito {
@@ -314,3 +320,35 @@ header .barraMenu {
         background-color: #eeff00; }
       .mainEmpresas #productosPorEmpresa .tarjeta .costoAlto {
         background-color: #ec0909; }
+
+.mainCompra {
+  margin-top: 120px; }
+  .mainCompra form {
+    width: 70%; }
+    .mainCompra form .boton {
+      text-align: right; }
+      .mainCompra form .boton .btn {
+        background-color: #f32323;
+        border: none; }
+        .mainCompra form .boton .btn:hover {
+          background-color: #d60f0f; }
+    .mainCompra form .listado {
+      display: flex;
+      justify-content: right; }
+      .mainCompra form .listado table {
+        color: white;
+        width: 50%; }
+        .mainCompra form .listado table .precio {
+          text-align: right; }
+        .mainCompra form .listado table thead th {
+          color: #66ff00; }
+        .mainCompra form .listado table tfoot .textoTabla {
+          text-align: right;
+          color: white; }
+        .mainCompra form .listado table tfoot .subtotal {
+          text-align: right;
+          border-top: 2px white solid; }
+        .mainCompra form .listado table tfoot .total {
+          text-align: right;
+          color: red;
+          border-top: white 2px solid; }

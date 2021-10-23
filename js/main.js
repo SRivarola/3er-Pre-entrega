@@ -21,18 +21,19 @@ let tiposDeMarca = [
   "remington",
 ];
 
-let productoDetallado;
-
+// Clase de Productos y su constructor.
 class Productos {
   constructor(nombre, marca) {
     this.nombre = nombre;
-    this.marca =marca;
+    this.marca = marca;
   }
 }
 
+let productoDetallado;
 let productoYmarca = document.getElementsByClassName('tituloFoto');
 let arrayDeProductos = [];
 
+// Iteracion para crear el array de productos.
 for (product of productoYmarca) {
   let nombre = product.innerHTML.split(' ')[0].toLowerCase();
   let marca = product.innerHTML.split(' ')[1].toLowerCase();
@@ -40,6 +41,7 @@ for (product of productoYmarca) {
   arrayDeProductos.push(productoDetallado);
 }
 
+//Función para el boton FILTRAR segun tipo de producto
 $("#btnFiltrar").click(function filtrar(e) {
   e.preventDefault();
   let chequeado = $(".form-check-input:checked");
@@ -57,6 +59,7 @@ $("#btnFiltrar").click(function filtrar(e) {
   } 
 });
 
+//Función para el boton BUSCAR, puede ser por marca o por nombre.
 $('#btnBuscar').click(function buscar(e) {
   e.preventDefault();
   let buscado = document.getElementById('busqueda');
@@ -64,7 +67,7 @@ $('#btnBuscar').click(function buscar(e) {
   for (e of reset) {
       e.style.display = "flex"
   }
-
+  //filtro por marca
   if (tiposDeMarca.includes(buscado.value.toLowerCase())) {
     let filtroBuscado = arrayDeProductos.filter(x => x.marca != buscado.value.toLowerCase());
     for (prod of filtroBuscado) {
@@ -73,6 +76,7 @@ $('#btnBuscar').click(function buscar(e) {
         prod.style.display = "none";
       }
     }
+  //filtro por nombre
   } else if (tiposDeProductos.includes(buscado.value.toLowerCase())) {
     let filtroBuscado = arrayDeProductos.filter(x => x.nombre != buscado.value.toLowerCase());
     for (prod of filtroBuscado) {
@@ -84,69 +88,73 @@ $('#btnBuscar').click(function buscar(e) {
   }
 });
 
+//evita que el dropdown se repliege al hacer click adentro.
 $('.dropdown-menu').on('click', function (e) {
   e.stopPropagation();
 });
 
-
 let contador = 0;
 let contadorTr= 0;
 
+//Función para todos los botones AGREGAR.
 $('.botonAgregar').click(function carrito(e) {
   e.preventDefault();
   
+  contador = contador + 1;  //sirve para contar cuantos productos hay en el carrito y mostrarlo.
+  contadorTr = contadorTr + 1;  //sirve como contador para algunos elementos que se agregan al dom.
+
   let idBtn = $(this).attr('id');
   let nombre = document.getElementsByClassName(idBtn)[0].childNodes[1].innerHTML;
   let precio = (document.getElementsByClassName(idBtn)[0].childNodes[5].childNodes[1].innerHTML).split('+')[0];
   
-  function contadorActivo() {
-    contador = contador + 1;
-    contadorTr = contadorTr + 1;
-  }
-  contadorActivo();
-
-  const tr = document.createElement(`tr`);
-  tr.classList.add(`tr${contadorTr}`);
+  //Creando todos los elementos necesarios para el dom.
+  const TR = document.createElement(`tr`);
+  TR.classList.add(`tr${contadorTr}`);
   
-  const tdNombre = document.createElement('td');
-  tdNombre.innerText = nombre;
+  const TDNOMBRE = document.createElement('td');
+  TDNOMBRE.innerText = nombre;
+  TDNOMBRE.classList.add('nombre');
 
-  const tdPrecio = document.createElement('td');
-  tdPrecio.innerText = precio;
-  tdPrecio.classList.add('precio');
+  const TDPRECIO = document.createElement('td');
+  TDPRECIO.innerText = precio;
+  TDPRECIO.classList.add('precio');
 
-  const tdBin = document.createElement('td');
-  tdBin.classList.add(`bin${contadorTr}`,'eliminar');
-  const boton = document.createElement('button');
-  boton.id = `btnEliminar${contadorTr}`;
-  boton.classList.add('btnEliminar');
-  const bin = $(`<span class="iconify fotoBin" data-icon="bytesize:trash"></span>`);
+  const TDBIN = document.createElement('td');
+  TDBIN.classList.add(`bin${contadorTr}`,'eliminar');
   
-  $('tbody').prepend(tr);
-  $(`.tr${contadorTr}`).prepend(tdBin);
-  $(`.bin${contadorTr}`).prepend(boton);
-  $(`#btnEliminar${contadorTr}`).prepend(bin);
-  $(`.tr${contadorTr}`).prepend(tdPrecio);
-  $(`.tr${contadorTr}`).prepend(tdNombre);
+  const BOTON = document.createElement('button');
+  BOTON.id = `btnEliminar${contadorTr}`;
+  BOTON.classList.add('btnEliminar');
+  
+  const BIN = $(`<span class="iconify fotoBin" data-icon="bytesize:trash"></span>`);
+  
+  //Agregando esos elementos al dom.
+  $('tbody').prepend(TR);
+  $(`.tr${contadorTr}`).prepend(TDBIN);
+  $(`.bin${contadorTr}`).prepend(BOTON);
+  $(`#btnEliminar${contadorTr}`).prepend(BIN);
+  $(`.tr${contadorTr}`).prepend(TDPRECIO);
+  $(`.tr${contadorTr}`).prepend(TDNOMBRE);
   
   let arrayDePrecios = [];
   let total = 0;
   let precios = document.getElementsByClassName('precio');
   
+  //creando un array de precios.
   for (precio of precios) {
     arrayDePrecios.push(Number(precio.innerHTML));
   }
-
+  //suma de precios para mostrar el total del costo.
   arrayDePrecios.forEach(function(a){total += a;});
   let precioTexto = document.getElementsByClassName('subtotal');
   precioTexto[0].innerText = total;
   
   let totalMasIva = total * 1.21
   let precioMasIva = document.getElementsByClassName('total');
-  precioMasIva[0].innerText = '$' + totalMasIva;
-  
+  precioMasIva[0].innerText = '$' + totalMasIva;  //sumandole iva al total de la compra.
+ 
   let contEnCarrito = document.getElementById('contador');
-  contEnCarrito.innerHTML = contador;
+  contEnCarrito.innerHTML = contador;  //agregando el contador al carrito.
  
   $('.btnEliminar').click(function eliminar(e) {
     e.preventDefault();
@@ -175,8 +183,7 @@ $('.botonAgregar').click(function carrito(e) {
   })
 });
 
-
-
+//Función para vaciar el carrito y la suma de los productos.
 $('#vaciarCarrito').click(function vaciar(e) {
   e.preventDefault();
   let precioTexto = document.getElementsByClassName('subtotal');
@@ -192,26 +199,37 @@ $('#vaciarCarrito').click(function vaciar(e) {
   contEnCarrito.innerHTML = '';
 })
 
-const URLGET = 'https://jsonplaceholder.typicode.com/posts';
-let infoPost = { nombre: tiposDeProductos[0], marca: tiposDeMarca[0]}
-
-$('#comprar').click(() => {
-  $.post(URLGET, infoPost, (response, state) => {
-    if (state === 'success') {
-      $('body').append(`
-      <div class="textoApi">
-        <h3>Guardado: ${response.nombre} ${response.marca} </h3>
-      </div>
-      `)
-      // console.log(response)
-    }
-  })
+class Carrito {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+let prodComprado;
+$('#comprar').click(function compra(e) {
+  e.preventDefault();
+  let productosComprados = document.getElementsByClassName('nombre');
+  let precioDeProductos = document.getElementsByClassName('precio');
+  console.log(productosComprados);
+  console.log(precioDeProductos);
+  let prodcomp = [];
+  let preprod = [];
+  for (elemento of productosComprados) {
+    let e = elemento.innerHTML;
+    prodcomp.push(e);
+  }
+  for (elem of precioDeProductos) {
+    let p = elem.innerHTML;
+    preprod.push(p);
+  }
+  sessionStorage.setItem('productos', JSON.stringify(prodcomp));
+  sessionStorage.setItem('precios', JSON.stringify(preprod));
+  window.location = './compra.html'
 })
 
 let API_KEY = "563492ad6f917000010000014113305811204c18a5be9c77787eded8";
 let URL_PEXELS = "https://api.pexels.com/v1/search?query=ecommerce";
-
-
+//Traigo unas imagenes de una api PEXELS y las muestro en el dom.
 $.ajax({
   url: URL_PEXELS,
   type: "GET",
@@ -233,4 +251,3 @@ $.ajax({
     }
   },
 });
-

@@ -1,0 +1,47 @@
+.mainCompra{
+    margin-top: 120px;
+    form{
+        width: 70%;
+        .boton{
+            text-align: right;
+            .btn{
+                background-color: rgb(243, 35, 35);
+                border: none;
+                &:hover{
+                    background-color: rgb(214, 15, 15);
+                }
+            }
+        }
+        .listado{
+            display: flex;
+            justify-content: right;
+            table{
+                color: white;
+                width: 50%;
+                .precio{
+                    text-align: right;
+                }
+                thead{
+                    th{
+                        color: #66ff00;
+                    }
+                }
+                tfoot{
+                    .textoTabla{
+                        text-align: right;
+                        color: white;
+                    }
+                    .subtotal{
+                        text-align: right;
+                        border-top: 2px white solid;
+                    }
+                    .total{
+                        text-align: right;
+                        color: red;
+                        border-top: white 2px solid;
+                    }
+                }
+            }
+        }
+    }
+}

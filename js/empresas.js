@@ -1,6 +1,7 @@
 let loguear = document.getElementById('logIn');
 loguear.addEventListener('click', nombreEmpresa);
 
+//Funciones para crear imputs y un boton en el dom.
 function crearInput1(){
     const div = document.createElement('div');
     div.classList.add('col-md-2');
@@ -58,6 +59,7 @@ function crearBoton(){
     document.getElementById('div4').appendChild(boton);
 }
 
+//Esta función crea una empresa cuando ponemos el nombre de la misma en el formulario y despliega otro formulario.
 function nombreEmpresa(e){
     let nombreE = document.getElementById('nombreEmpresa').value;
     e.preventDefault();
@@ -74,7 +76,7 @@ function nombreEmpresa(e){
         h3.textContent = 'Cargue sus Productos:';
         document.getElementById('empresa').appendChild(h3);
 
-        crearInput1();
+        crearInput1();      //desplegando el formilario
         crearInput2();
         crearInput3();
         crearBoton();
@@ -91,6 +93,7 @@ function nombreEmpresa(e){
         let carga = document.getElementById('btnCargar');
         carga.addEventListener('click', cargarProducto)
         
+        //Función para agregar los productos al dom y q los guarde en el local storage.
         function cargarProducto(e) {
             e.preventDefault();
             let id = document.getElementById('validationDefault01').value;
@@ -126,6 +129,7 @@ class Producto {
     }
 }
 
+//Clase y contructor para la empresa y sus metodos.
 class Empresa {
     constructor(nombre){
         this.nombre = nombre;
