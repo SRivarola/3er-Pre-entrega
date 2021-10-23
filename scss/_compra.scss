@@ -27,17 +27,24 @@
                     }
                 }
                 tfoot{
-                    .textoTabla{
+                    .textoTablaST{
+                        text-align: right;
+                        color: grey;
+                        border-bottom: none;
+                    }
+                    .textoTablaT{
                         text-align: right;
                         color: white;
+                        border-bottom: none;
                     }
                     .subtotal{
+                        color: grey;
                         text-align: right;
                         border-top: 2px white solid;
                     }
                     .total{
                         text-align: right;
-                        color: red;
+                        color: #66ff00;
                         border-top: white 2px solid;
                     }
                 }

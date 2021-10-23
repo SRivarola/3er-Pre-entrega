@@ -210,8 +210,7 @@ $('#comprar').click(function compra(e) {
   e.preventDefault();
   let productosComprados = document.getElementsByClassName('nombre');
   let precioDeProductos = document.getElementsByClassName('precio');
-  console.log(productosComprados);
-  console.log(precioDeProductos);
+  
   let prodcomp = [];
   let preprod = [];
   for (elemento of productosComprados) {
@@ -224,7 +223,14 @@ $('#comprar').click(function compra(e) {
   }
   sessionStorage.setItem('productos', JSON.stringify(prodcomp));
   sessionStorage.setItem('precios', JSON.stringify(preprod));
-  window.location = './compra.html'
+
+  let tbody = $('tbody')[0];
+  console.log(tbody.hasChildNodes('tr'))
+  if (tbody.hasChildNodes('tr')) {
+    window.location = './compra.html';
+  } else {
+    alert('Ud. no ah seleccionado nungun producto!');
+  }
 })
 
 let API_KEY = "563492ad6f917000010000014113305811204c18a5be9c77787eded8";

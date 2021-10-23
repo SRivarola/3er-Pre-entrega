@@ -342,13 +342,19 @@ header .barraMenu {
           text-align: right; }
         .mainCompra form .listado table thead th {
           color: #66ff00; }
-        .mainCompra form .listado table tfoot .textoTabla {
+        .mainCompra form .listado table tfoot .textoTablaST {
           text-align: right;
-          color: white; }
+          color: grey;
+          border-bottom: none; }
+        .mainCompra form .listado table tfoot .textoTablaT {
+          text-align: right;
+          color: white;
+          border-bottom: none; }
         .mainCompra form .listado table tfoot .subtotal {
+          color: grey;
           text-align: right;
           border-top: 2px white solid; }
         .mainCompra form .listado table tfoot .total {
           text-align: right;
-          color: red;
+          color: #66ff00;
           border-top: white 2px solid; }
