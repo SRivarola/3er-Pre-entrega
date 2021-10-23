@@ -51,4 +51,21 @@
             }
         }
     }
+    .textoApiF{
+        margin-top: 50px;
+        width: 50%;
+        text-align: center;
+        h3{
+            font-size: 16px;
+        }
+        .list{
+            display: flex;
+            justify-content: space-around;
+            .table{
+                width: 60%;
+                color: white;
+            }   
+        }
+
+    }
 }

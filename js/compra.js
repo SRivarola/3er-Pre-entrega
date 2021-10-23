@@ -37,18 +37,81 @@ total = subtotal * 1.21;
 let precioTotalTexto = document.getElementsByClassName('total');
 precioTotalTexto[0].innerHTML = `$${total}`
 
-// const URLGET = 'https://jsonplaceholder.typicode.com/posts';
-// let infoPost = { nombre: tiposDeProductos[0], marca: tiposDeMarca[0]}
+$('.finalizar').click(function procesar(e) {
+    e.preventDefault();
+    let contador3 = 0;
+    let contador4 = 0;
+    let nombre = $('#validationCustom01')[0].value;
+    let apellido = $('#validationCustom02')[0].value;
+    let direccion = $('#validationCustom03')[0].value;
+    let cp = $('#validationCustom04')[0].value;
+    let celular = $('#validationCustom05')[0].value;
 
-// $('#comprar').click(() => {
-//   $.post(URLGET, infoPost, (response, state) => {
-//     if (state === 'success') {
-//       $('body').append(`
-//       <div class="textoApi">
-//         <h3>Guardado: ${response.nombre} ${response.marca} </h3>
-//       </div>
-//       `)
-//       // console.log(response)
-//     }
-//   })
-// })
+    if (nombre != '' && apellido != '' && direccion != '' && cp != '' && celular != '') {
+        const URLGET = 'https://jsonplaceholder.typicode.com/posts';
+        let infoPost = { nombre, apellido, direccion, cp, celular}
+        $.post(URLGET, infoPost, (response, state) => {
+            if (state === 'success') {
+                $('main').append(`
+                <div class="textoApiF">
+                    <h3>Nombre:${response.nombre} ${response.apellido}</h3>
+                    <h3>Dirección:${response.direccion} ${response.cp}</h3>
+                    <h3>Contacto: ${response.celular}
+                    <div class="list">
+                        <table class="table tablaFactura">
+                            <thead>
+                                <tr>
+                                    <th scope="col">PRODUCTOS</th>
+                                    <th class="precio" scope="col">PRECIOS</th>
+                                </tr>
+                            </thead>
+                            <tbody class="factura">
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                              <th class="textoTablaST">Subtotal:</td>
+                              <th class="subtotalF"></td>
+                            </tr>
+                            <tr>
+                              <th class="textoTablaT">TOTAL:</td>
+                              <th class="totalF"></td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                    </div>
+                </div>
+                `)
+                for (item of precios) {
+                    contador3 = contador3 + 1;
+                    const TR = document.createElement(`tr`);
+                    TR.classList.add(`trf${contador3}`);
+                
+                    const TDPRECIO = document.createElement('td');
+                    TDPRECIO.innerText = `$${item}`;
+                    TDPRECIO.classList.add('precioP');
+                    
+                    $('.factura').prepend(TR);
+                    $(`.trf${contador3}`).prepend(TDPRECIO);
+                }
+                
+                for (producto of productos) {
+                    contador4 = contador4 + 1;
+                    const TDNOMBRE = document.createElement('td');
+                    TDNOMBRE.innerHTML = producto;
+                    TDNOMBRE.classList.add('nombre');   
+                    
+                    $(`.trf${contador4}`).prepend(TDNOMBRE);
+                }
+                $('.subtotalF')[0].innerHTML = subtotal;
+                $('.totalF')[0].innerHTML = total;
+            }
+          })
+    } else {
+        alert('Le faltan completar datos')
+    }
+});
+
+
+
+
+  

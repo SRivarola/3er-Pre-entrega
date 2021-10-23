@@ -358,3 +358,15 @@ header .barraMenu {
           text-align: right;
           color: #66ff00;
           border-top: white 2px solid; }
+  .mainCompra .textoApiF {
+    margin-top: 50px;
+    width: 50%;
+    text-align: center; }
+    .mainCompra .textoApiF h3 {
+      font-size: 16px; }
+    .mainCompra .textoApiF .list {
+      display: flex;
+      justify-content: space-around; }
+      .mainCompra .textoApiF .list .table {
+        width: 60%;
+        color: white; }
