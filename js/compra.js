@@ -105,7 +105,8 @@ $('.finalizar').click(function procesar(e) {
                 $('.subtotalF')[0].innerHTML = subtotal;
                 $('.totalF')[0].innerHTML = total;
             }
-          })
+        })
+        alert('Su compra se realizó correctamente.');
     } else {
         alert('Le faltan completar datos')
     }

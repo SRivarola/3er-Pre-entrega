@@ -162,11 +162,9 @@ $('.botonAgregar').click(function carrito(e) {
     let num = btnElim[btnElim.length-1];
     let elim = document.getElementsByClassName(`tr${num}`)[0];
     elim.remove();
-  
+    
     contador = contador - 1;
     contEnCarrito.innerHTML = contador;
-  
-    console.log(precios)
 
     arrayDePrecios2 = [];
 
