@@ -156,6 +156,11 @@ $('.botonAgregar').click(function carrito(e) {
   let contEnCarrito = document.getElementById('contador');
   contEnCarrito.innerHTML = contador;  //agregando el contador al carrito.
 
+  eliminarProducto();
+ 
+});
+
+function eliminarProducto () {
   $('.btnEliminar').click(function eliminar(e) {
     e.preventDefault();
     let btnElim = $(this).attr('id').split('');
@@ -163,10 +168,12 @@ $('.botonAgregar').click(function carrito(e) {
     let elim = document.getElementsByClassName(`tr${num}`)[0];
     elim.remove();
     
+    let contEnCarrito = document.getElementById('contador');
     contador = contador - 1;
     contEnCarrito.innerHTML = contador;
 
-    arrayDePrecios2 = [];
+    let arrayDePrecios2 = [];
+    let precios = document.getElementsByClassName('precio');
 
     for (precio of precios) {
       arrayDePrecios2.push(Number(precio.innerHTML));
@@ -174,12 +181,14 @@ $('.botonAgregar').click(function carrito(e) {
 
     let total2 = 0;
     arrayDePrecios2.forEach(function(a){total2 += a;});
+    let precioTexto = document.getElementsByClassName('subtotal');
     precioTexto[0].innerText = total2;
 
     let totalMasIva2 = total2 * 1.21
+    let precioMasIva = document.getElementsByClassName('total');
     precioMasIva[0].innerText = '$' + totalMasIva2;
   })
-});
+}
 
 //Función para vaciar el carrito y la suma de los productos.
 $('#vaciarCarrito').click(function vaciar(e) {
@@ -203,8 +212,6 @@ class Carrito {
     this.precio = precio;
   }
 }
-
-let prodComprado;
 
 $('#comprar').click(function compra(e) {
   e.preventDefault();
