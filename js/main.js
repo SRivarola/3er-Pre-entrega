@@ -227,7 +227,7 @@ $('#comprar').click(function compra(e) {
   if (tbody.hasChildNodes('tr')) {
     window.location = './compra.html';
   } else {
-    alert('Ud. no ah seleccionado nungun producto!');
+    Swal.fire('Ud. no ah seleccionado nungun producto!');
   }
 })
 

@@ -102,24 +102,32 @@ function nombreEmpresa(e){
             let producto;
             if((id !='' && nombre != '' && precio != '')){
                 producto = new Producto(id, nombre, precio);
-                let productosDelDeposito = JSON.parse(localStorage.getItem(nombreE));
                 let arrayDeIds = [];
-                for (prod of productosDelDeposito) {
-                    arrayDeIds.push(prod.id);
-                }
-                if (arrayDeIds.includes(producto.id)) {
-                    return alert('El producto ingresado ya existe')
-                } else {
+                let productosDelDeposito = JSON.parse(localStorage.getItem(nombreE));
+                if(!productosDelDeposito){
+                    localStorage.setItem(nombreE, JSON.stringify([producto]))
                     empresa.agregarProducto(producto);
-                    empresa.actualizarDeposito();
                     empresa.mostrarProductos(producto);
+                    arrayDeIds.push(producto.id);
+                } else{
+                    for (let prod of productosDelDeposito) {
+                        arrayDeIds.push(prod.id);
+                    }
+                    if (arrayDeIds.includes(producto.id)) {
+                        return Swal.fire('El producto ingresado ya existe');
+                    } else {
+                        empresa.agregarProducto(producto);
+                        empresa.actualizarDeposito();
+                        empresa.mostrarProductos(producto);
+                    }
                 }
             } else {
-                return alert('Faltan DATOS')
+                return Swal.fire('Faltan DATOS');
             }
         }
     }
 }
+
 
 class Producto {
     constructor(id, nombre, precio) {
@@ -147,7 +155,7 @@ class Empresa {
 
     agregarProducto(producto) {
         if(this.productos.find(producto => producto.id == document.getElementById('validationDefault01').value)) {
-            return alert('El producto ingresado ya existe')
+            return Swal.fire('El producto ingresado ya existe');
         } else {
             return this.productos.push(producto);
         }
@@ -159,7 +167,7 @@ class Empresa {
 
     mostrarProductos(producto) {
         const div = document.createElement('div');
-            div.appendChild(this.armarTarjeta(producto));
+        div.appendChild(this.armarTarjeta(producto));
         document.getElementById('productosPorEmpresa').appendChild(div);
         $('.tarjeta').slideDown('slow');
     }

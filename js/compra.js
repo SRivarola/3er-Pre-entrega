@@ -106,9 +106,10 @@ $('.finalizar').click(function procesar(e) {
                 $('.totalF')[0].innerHTML = total;
             }
         })
-        alert('Su compra se realizó correctamente.');
+        $('.finalizar').fadeOut(800);
+        Swal.fire('Su compra se realizó correctamente.');
     } else {
-        alert('Le faltan completar datos')
+        Swal.fire('Le faltan completar datos');
     }
 });
 
