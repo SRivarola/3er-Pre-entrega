@@ -100,157 +100,65 @@ header .barraMenu {
   display: flex;
   justify-content: space-around; }
 
-.mainIndex {
-  width: 100%;
-  height: 600px;
-  background-color: #dbdbdb; }
-  .mainIndex .megaSale {
-    width: 100%;
-    display: flex;
-    flex-direction: row; }
-    .mainIndex .megaSale .descuento {
-      background-color: #dbdbdb;
-      width: 280px;
-      border: #adadad 1px solid;
-      border-radius: 10px;
-      margin-left: 4rem;
-      margin-right: 10px; }
-      .mainIndex .megaSale .descuento .mega {
-        color: #ec0909;
-        text-decoration: none;
-        text-align: center;
-        font-size: 60px;
-        margin-top: 20px;
-        margin-left: 20px;
-        margin-right: 20px; }
-      .mainIndex .megaSale .descuento .sale {
-        color: #ec0909;
-        text-decoration: none;
-        text-align: center;
-        font-size: 60px;
-        margin-top: -50px;
-        letter-spacing: 4px; }
-      .mainIndex .megaSale .descuento .hasta {
-        color: #ec0909;
-        text-decoration: none;
-        text-align: center;
-        font-size: 60px; }
-      .mainIndex .megaSale .descuento .dieciocho {
-        color: #ec0909;
-        text-decoration: none;
-        text-align: center;
-        font-size: 150px;
-        margin-top: -85px; }
-      .mainIndex .megaSale .descuento .sinInteres {
-        color: #ec0909;
-        text-decoration: none;
-        text-align: center;
-        font-size: 40px;
-        margin-top: -80px; }
-    .mainIndex .megaSale .linkProducto {
-      text-decoration: none;
-      color: #000000;
-      font-size: 18px; }
-      .mainIndex .megaSale .linkProducto .card {
-        margin: 10px;
-        text-align: center; }
-        .mainIndex .megaSale .linkProducto .card:hover {
-          border: #adadad 2px solid; }
-        .mainIndex .megaSale .linkProducto .card .textoFoto {
-          position: relative;
-          top: 10px; }
-        .mainIndex .megaSale .linkProducto .card .descripcion {
-          border-top: #686767 1px solid;
-          margin-top: 15px; }
-          .mainIndex .megaSale .linkProducto .card .descripcion .textoDescripcion {
-            text-decoration: none;
-            font-size: 18px;
-            margin: 12px; }
-            .mainIndex .megaSale .linkProducto .card .descripcion .textoDescripcion .antes {
-              color: #686767;
-              text-decoration: line-through; }
-            .mainIndex .megaSale .linkProducto .card .descripcion .textoDescripcion .ahora {
-              margin-left: 5px; }
-            .mainIndex .megaSale .linkProducto .card .descripcion .textoDescripcion .porcentaje {
-              margin-left: 90px;
-              font-weight: bold;
-              color: #479712; }
-            .mainIndex .megaSale .linkProducto .card .descripcion .textoDescripcion .porcentaje2 {
-              margin-left: 60px;
-              font-weight: bold;
-              color: #479712; }
-          .mainIndex .megaSale .linkProducto .card .descripcion .masIva {
-            font-size: 12px;
-            margin-top: -20px;
-            margin-left: -110px; }
-          .mainIndex .megaSale .linkProducto .card .descripcion .masIvaDos {
-            font-size: 12px;
-            margin-top: -20px;
-            margin-left: -70px; }
-          .mainIndex .megaSale .linkProducto .card .descripcion .cuotas {
-            color: #ec0909;
-            text-align: center;
-            margin: 5px; }
-            .mainIndex .megaSale .linkProducto .card .descripcion .cuotas span {
-              font-weight: bold; }
-
-.formBuscador {
-  margin-top: 30px;
-  margin-left: 90px;
-  width: 95%; }
-  .formBuscador .botonBuscar {
-    color: #000000;
-    background-color: #66ff00;
-    border: none; }
-
-.productosVarios {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 90%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #dbdbdb;
-  display: grid;
-  grid-template-columns: 18% 82%; }
-  .productosVarios .barraLateral {
-    height: 100%;
-    padding-top: 20px;
-    padding-left: 25px;
-    color: #000000; }
-    .productosVarios .barraLateral .titulo {
-      margin-top: 20px;
-      margin-bottom: 10px; }
-    .productosVarios .barraLateral .botonForm {
+#cajaproductos {
+  width: 95%;
+  margin-left: 20px; }
+  #cajaproductos .formBuscador {
+    margin-top: 30px;
+    margin-left: 90px;
+    width: 95%; }
+    #cajaproductos .formBuscador .botonBuscar {
       color: #000000;
       background-color: #66ff00;
-      margin-top: 10px;
       border: none; }
-  .productosVarios .productos {
-    margin: 25px;
+  #cajaproductos .productosVarios {
+    width: 95%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #dbdbdb;
     display: grid;
-    grid-template-columns: 33% 33% 33%; }
-    .productosVarios .productos .card {
-      margin: 10px; }
-      .productosVarios .productos .card:hover {
-        transform: scale(1.05); }
-      .productosVarios .productos .card .tituloFoto {
+    grid-template-columns: 15% 85%; }
+    #cajaproductos .productosVarios .barraLateral {
+      height: 100%;
+      padding-top: 20px;
+      padding-left: 25px;
+      color: #000000; }
+      #cajaproductos .productosVarios .barraLateral .titulo {
+        margin-top: 20px;
+        margin-bottom: 10px; }
+      #cajaproductos .productosVarios .barraLateral .botonForm {
         color: #000000;
-        text-align: center;
-        padding-top: 5px; }
-      .productosVarios .productos .card .descripcion {
-        display: inline-flex;
-        margin-bottom: 5px; }
-        .productosVarios .productos .card .descripcion .textoDescripcion {
-          padding-left: 25px;
-          padding-top: 8px;
-          color: #000000; }
-        .productosVarios .productos .card .descripcion .botonAgregar {
-          border: none;
-          background-color: #66ff00;
+        background-color: #66ff00;
+        margin-top: 10px;
+        border: none; }
+    #cajaproductos .productosVarios .productos {
+      margin: 25px;
+      display: grid;
+      grid-template-columns: 33% 33% 33%; }
+      #cajaproductos .productosVarios .productos .card {
+        margin: 10px; }
+        #cajaproductos .productosVarios .productos .card:hover {
+          transform: scale(1.05); }
+        #cajaproductos .productosVarios .productos .card .tituloFoto {
           color: #000000;
-          margin-left: 65px;
-          height: 40px; }
+          text-align: center;
+          padding-top: 5px; }
+        #cajaproductos .productosVarios .productos .card .descripcion {
+          display: inline-flex;
+          margin-bottom: 5px; }
+          #cajaproductos .productosVarios .productos .card .descripcion .textoDescripcion {
+            padding-left: 25px;
+            padding-top: 8px;
+            color: #000000; }
+          #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar {
+            border: none;
+            background-color: #66ff00;
+            color: #000000;
+            margin-left: 65px;
+            height: 40px; }
 
 .textoApi {
   text-align: center;

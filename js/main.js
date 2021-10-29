@@ -34,7 +34,7 @@ let productoYmarca = document.getElementsByClassName('tituloFoto');
 let arrayDeProductos = [];
 
 // Iteracion para crear el array de productos.
-for (product of productoYmarca) {
+for (let product of productoYmarca) {
   let nombre = product.innerHTML.split(' ')[0].toLowerCase();
   let marca = product.innerHTML.split(' ')[1].toLowerCase();
   productoDetallado = new Productos(nombre, marca);
@@ -49,7 +49,7 @@ $("#btnFiltrar").click(function filtrar(e) {
   for(e of reset){
       e.style.display = "flex"
   }
-  for (producto of tiposDeProductos) {
+  for (let producto of tiposDeProductos) {
     if (chequeado[0].value != producto && chequeado[0].value != 'todos') {
       let productosClass = document.getElementsByClassName(producto);
       for (prod of productosClass) {
@@ -155,7 +155,7 @@ $('.botonAgregar').click(function carrito(e) {
  
   let contEnCarrito = document.getElementById('contador');
   contEnCarrito.innerHTML = contador;  //agregando el contador al carrito.
- 
+
   $('.btnEliminar').click(function eliminar(e) {
     e.preventDefault();
     let btnElim = $(this).attr('id').split('');
@@ -203,7 +203,9 @@ class Carrito {
     this.precio = precio;
   }
 }
+
 let prodComprado;
+
 $('#comprar').click(function compra(e) {
   e.preventDefault();
   let productosComprados = document.getElementsByClassName('nombre');
@@ -227,7 +229,7 @@ $('#comprar').click(function compra(e) {
   if (tbody.hasChildNodes('tr')) {
     window.location = './compra.html';
   } else {
-    Swal.fire('Ud. no ah seleccionado nungun producto!');
+    Swal.fire('Ud. no ha seleccionado nungún producto!');
   }
 })
 
