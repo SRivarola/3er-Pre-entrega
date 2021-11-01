@@ -41,6 +41,8 @@ header{
                 display:none;
             }
             .dropdown-menu{
+                height: 250px;
+                overflow-y: scroll; 
                 .dropdown-item{
                     width: 95%;
                     &:hover{
@@ -50,36 +52,38 @@ header{
                 li{
                     margin: 5px;
                     table{
-                        .textoTabla{
-                            text-align: right;
-                        }
-                        .subtotal{
-                            text-align: right;
-                        }
-                        .total{
-                            color: green;
-                            font-weight: bolder;
-                            text-align: right;
-                        }
-                        .precio{
-                            text-align: right;
-                        }
-                        .eliminar{
-                            display: flex;
-                            justify-content: space-around;
-                            .btnEliminar{
-                                border: none;
-                                background-color: white;
-                                .fotoBin{
-                                    font-size: 25px;
-                                    &:hover{
-                                        color: #ff0000;
+                        tbody{
+                            .precio{
+                                text-align: right;
+                            }
+                            .eliminar{
+                                display: flex;
+                                justify-content: space-around;
+                                .btnEliminar{
+                                    border: none;
+                                    background-color: white;
+                                    .fotoBin{
+                                        font-size: 25px;
+                                        &:hover{
+                                            color: #ff0000;
+                                        }
                                     }
                                 }
                             }
-
                         }
-
+                        tfoot{
+                            .textoTabla{
+                                text-align: right;
+                            }
+                            .subtotal{
+                                text-align: right;
+                            }
+                            .total{
+                                color: green;
+                                font-weight: bolder;
+                                text-align: right;
+                            }
+                        }
                     }
                     button{
                         width: 100%;

@@ -47,34 +47,37 @@ header .barraMenu {
     font-size: 12px; }
   header .barraMenu .dropdown .dropdown-toggle::after {
     display: none; }
-  header .barraMenu .dropdown .dropdown-menu .dropdown-item {
-    width: 95%; }
-    header .barraMenu .dropdown .dropdown-menu .dropdown-item:hover {
-      background-color: white; }
-  header .barraMenu .dropdown .dropdown-menu li {
-    margin: 5px; }
-    header .barraMenu .dropdown .dropdown-menu li table .textoTabla {
-      text-align: right; }
-    header .barraMenu .dropdown .dropdown-menu li table .subtotal {
-      text-align: right; }
-    header .barraMenu .dropdown .dropdown-menu li table .total {
-      color: green;
-      font-weight: bolder;
-      text-align: right; }
-    header .barraMenu .dropdown .dropdown-menu li table .precio {
-      text-align: right; }
-    header .barraMenu .dropdown .dropdown-menu li table .eliminar {
-      display: flex;
-      justify-content: space-around; }
-      header .barraMenu .dropdown .dropdown-menu li table .eliminar .btnEliminar {
-        border: none;
+  header .barraMenu .dropdown .dropdown-menu {
+    height: 250px;
+    overflow-y: scroll; }
+    header .barraMenu .dropdown .dropdown-menu .dropdown-item {
+      width: 95%; }
+      header .barraMenu .dropdown .dropdown-menu .dropdown-item:hover {
         background-color: white; }
-        header .barraMenu .dropdown .dropdown-menu li table .eliminar .btnEliminar .fotoBin {
-          font-size: 25px; }
-          header .barraMenu .dropdown .dropdown-menu li table .eliminar .btnEliminar .fotoBin:hover {
-            color: #ff0000; }
-    header .barraMenu .dropdown .dropdown-menu li button {
-      width: 100%; }
+    header .barraMenu .dropdown .dropdown-menu li {
+      margin: 5px; }
+      header .barraMenu .dropdown .dropdown-menu li table tbody .precio {
+        text-align: right; }
+      header .barraMenu .dropdown .dropdown-menu li table tbody .eliminar {
+        display: flex;
+        justify-content: space-around; }
+        header .barraMenu .dropdown .dropdown-menu li table tbody .eliminar .btnEliminar {
+          border: none;
+          background-color: white; }
+          header .barraMenu .dropdown .dropdown-menu li table tbody .eliminar .btnEliminar .fotoBin {
+            font-size: 25px; }
+            header .barraMenu .dropdown .dropdown-menu li table tbody .eliminar .btnEliminar .fotoBin:hover {
+              color: #ff0000; }
+      header .barraMenu .dropdown .dropdown-menu li table tfoot .textoTabla {
+        text-align: right; }
+      header .barraMenu .dropdown .dropdown-menu li table tfoot .subtotal {
+        text-align: right; }
+      header .barraMenu .dropdown .dropdown-menu li table tfoot .total {
+        color: green;
+        font-weight: bolder;
+        text-align: right; }
+      header .barraMenu .dropdown .dropdown-menu li button {
+        width: 100%; }
 
 .logo .techoCasa {
   margin-top: 30px;
