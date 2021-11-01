@@ -34,10 +34,18 @@
         margin-top: 30px;
         margin-left: 90px;
         width: 95%;
-        .botonBuscar{
+        #btnBuscar{
+            padding-top: 6.5px;
+            padding-bottom: 6.5px;
+            padding-left: 9px;
+            padding-right: 9px;
+            border-radius: 4px;
             color: #000000;
             background-color: #66ff00;
-            border: none;
+            border: 1px solid #2f7402;
+            &:hover{
+                background-color: #5de900;
+            }
         }
     }
     .productosVarios{
@@ -61,10 +69,17 @@
                 margin-bottom: 10px;
             }
             .botonForm{
+                padding-top: 6.5px;
+                padding-bottom: 6.5px;
+                padding-left: 9px;
+                padding-right: 9px;
+                border-radius: 4px;
                 color: #000000;
                 background-color: #66ff00;
-                margin-top: 10px;
-                border: none;
+                border: 1px solid #2f7402;
+                &:hover{
+                    background-color: #5de900;
+                }
             }
         }
         .productos{
@@ -74,7 +89,8 @@
             .card{
                 margin: 10px;
                 &:hover{
-                    transform: scale(1.05);
+                    transform: scale(1.03);
+                    transition: 1000ms;
                 }
                 .tituloFoto{
                     color: #000000;
@@ -90,21 +106,25 @@
                         color: #000000;
                     }
                     .botonAgregar{
-                        border: none;
-                        background-color: #66ff00;
+                        padding-top: 6.5px;
+                        padding-bottom: 6.5px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border-radius: 4px;
                         color: #000000;
+                        background-color: #66ff00;
                         margin-left: 65px;
                         height: 40px;
+                        border: 1px solid #2f7402;
+                        &:hover{
+                            background-color: #5de900;
+                        }
                     }
                 }
             }
         }
     }
 }
-
-
-
-
 
 .textoApi{
     text-align: center;

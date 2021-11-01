@@ -142,7 +142,9 @@ $('.botonAgregar').click(function carrito(e) {
   
   //creando un array de precios.
   for (precio of precios) {
-    arrayDePrecios.push(Number(precio.innerHTML));
+    console.log(precio.innerHTML.slice(1));
+
+    arrayDePrecios.push(Number(precio.innerHTML.slice(1)));
   }
   //suma de precios para mostrar el total del costo.
   arrayDePrecios.forEach(function(a){total += a;});

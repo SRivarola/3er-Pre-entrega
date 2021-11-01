@@ -107,10 +107,17 @@ header .barraMenu {
     margin-top: 30px;
     margin-left: 90px;
     width: 95%; }
-    #cajaproductos .formBuscador .botonBuscar {
+    #cajaproductos .formBuscador #btnBuscar {
+      padding-top: 6.5px;
+      padding-bottom: 6.5px;
+      padding-left: 9px;
+      padding-right: 9px;
+      border-radius: 4px;
       color: #000000;
       background-color: #66ff00;
-      border: none; }
+      border: 1px solid #2f7402; }
+      #cajaproductos .formBuscador #btnBuscar:hover {
+        background-color: #5de900; }
   #cajaproductos .productosVarios {
     width: 95%;
     margin-top: 30px;
@@ -130,10 +137,16 @@ header .barraMenu {
         margin-top: 20px;
         margin-bottom: 10px; }
       #cajaproductos .productosVarios .barraLateral .botonForm {
+        padding-top: 6.5px;
+        padding-bottom: 6.5px;
+        padding-left: 9px;
+        padding-right: 9px;
+        border-radius: 4px;
         color: #000000;
         background-color: #66ff00;
-        margin-top: 10px;
-        border: none; }
+        border: 1px solid #2f7402; }
+        #cajaproductos .productosVarios .barraLateral .botonForm:hover {
+          background-color: #5de900; }
     #cajaproductos .productosVarios .productos {
       margin: 25px;
       display: grid;
@@ -141,7 +154,8 @@ header .barraMenu {
       #cajaproductos .productosVarios .productos .card {
         margin: 10px; }
         #cajaproductos .productosVarios .productos .card:hover {
-          transform: scale(1.05); }
+          transform: scale(1.03);
+          transition: 1000ms; }
         #cajaproductos .productosVarios .productos .card .tituloFoto {
           color: #000000;
           text-align: center;
@@ -154,11 +168,18 @@ header .barraMenu {
             padding-top: 8px;
             color: #000000; }
           #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar {
-            border: none;
-            background-color: #66ff00;
+            padding-top: 6.5px;
+            padding-bottom: 6.5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 4px;
             color: #000000;
+            background-color: #66ff00;
             margin-left: 65px;
-            height: 40px; }
+            height: 40px;
+            border: 1px solid #2f7402; }
+            #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar:hover {
+              background-color: #5de900; }
 
 .textoApi {
   text-align: center;
