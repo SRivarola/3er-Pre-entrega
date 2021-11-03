@@ -4,7 +4,7 @@ let contador = 0;
 let contadorDos = 0;
 let subtotal = 0;
 let precioParseado = [];
-console.log(precios)
+
 for (item of precios) {
     precioParseado.push(Number(item));
     contadorDos = contadorDos + 1;
@@ -55,14 +55,16 @@ $('.finalizar').click(function procesar(e) {
                 if (state === 'success') {
                     $('main').append(`
                     <div class="textoApiF">
-                        <h3>Nombre:${response.nombre} ${response.apellido}</h3>
-                        <h3>Dirección:${response.direccion} ${response.cp}</h3>
-                        <h3>Contacto: ${response.celular}
+                        <div class="datosPersonales">
+                            <h3>Nombre:${response.nombre} ${response.apellido}</h3>
+                            <h3>Dirección:${response.direccion} ${response.cp}</h3>
+                            <h3>Contacto: ${response.celular}
+                        </div>
                         <div class="list">
                             <table class="table tablaFactura">
                                 <thead>
                                     <tr>
-                                        <th scope="col">PRODUCTOS</th>
+                                        <th scope="col" class="producto">PRODUCTOS</th>
                                         <th class="precio" scope="col">PRECIOS</th>
                                     </tr>
                                 </thead>

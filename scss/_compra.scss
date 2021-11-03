@@ -16,7 +16,9 @@
             display: flex;
             justify-content: right;
             table{
-                color: white;
+                background-color: #161616;
+                border-radius: 5px;
+                color: #ffffff;
                 width: 50%;
                 .precio{
                     text-align: right;
@@ -29,7 +31,7 @@
                 tfoot{
                     .textoTablaST{
                         text-align: right;
-                        color: grey;
+                        color: #969696;
                         border-bottom: none;
                     }
                     .textoTablaT{
@@ -52,18 +54,42 @@
         }
     }
     .textoApiF{
+        color: #000000;
         margin-top: 50px;
-        width: 50%;
         text-align: center;
-        h3{
-            font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        .datosPersonales{
+            width: 25%;
+            background-color: #ffffff;
+            margin: 0 auto;
+            border-bottom: 1px #161616 solid;
+            border-radius: 5px 5px 0px 0px;
+            h3{
+                margin: 5px;
+                padding: 5px;
+                font-size: 16px;
+            }
         }
         .list{
             display: flex;
             justify-content: space-around;
-            .table{
-                width: 60%;
-                color: white;
+            .table{          
+                background-color: #ffffff;
+                width: 25%;
+                color: black;
+                border-radius: 0px 0px 5px 5px;
+                margin-bottom: 30px;
+                .precioP, .subtotalF, .totalF, .textoTablaT, .textoTablaST, .precio{
+                    text-align: right;
+                }
+                .nombre, .producto{
+                    text-align: left;
+                }
+                .totalF, .textoTablaT{
+                    border-bottom: none;
+                }
             }   
         }
 

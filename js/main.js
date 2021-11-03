@@ -195,25 +195,23 @@ function eliminarProducto () {
 //Función para vaciar el carrito y la suma de los productos.
 $('#vaciarCarrito').click(function vaciar(e) {
   e.preventDefault();
+  
   let precioTexto = document.getElementsByClassName('subtotal');
   let precioMasIva = document.getElementsByClassName('total');
   let contEnCarrito = document.getElementById('contador');
   let carrito = document.getElementsByTagName('tbody')[0];
-  while(carrito.hasChildNodes())
-   carrito.removeChild(carrito.firstChild);
+  
   precioTexto[0].innerText = '';
   precioMasIva[0].innerText = '';
+  contEnCarrito.innerHTML = '';
+
   contador = 0;
   contadorTr = 0;
-  contEnCarrito.innerHTML = '';
-})
-
-class Carrito {
-  constructor(nombre, precio) {
-    this.nombre = nombre;
-    this.precio = precio;
+  
+  while(carrito.hasChildNodes()) {
+    carrito.removeChild(carrito.firstChild);
   }
-}
+})
 
 $('#comprar').click(function compra(e) {
   e.preventDefault();
