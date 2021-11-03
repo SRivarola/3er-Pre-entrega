@@ -4,7 +4,7 @@ let contador = 0;
 let contadorDos = 0;
 let subtotal = 0;
 let precioParseado = [];
-
+console.log(precios)
 for (item of precios) {
     precioParseado.push(Number(item));
     contadorDos = contadorDos + 1;
@@ -19,7 +19,7 @@ for (item of precios) {
     $(`.tr${contadorDos}`).prepend(TDPRECIO);
 }
 
-for (producto of productos) {
+for (let producto of productos) {
     contador = contador + 1;
     const TDNOMBRE = document.createElement('td');
     TDNOMBRE.innerHTML = producto;

@@ -178,7 +178,7 @@ function eliminarProducto () {
     let precios = document.getElementsByClassName('precio');
 
     for (precio of precios) {
-      arrayDePrecios2.push(Number(precio.innerHTML));
+      arrayDePrecios2.push(Number(precio.innerHTML.slice(1)));
     }
 
     let total2 = 0;
@@ -219,7 +219,7 @@ $('#comprar').click(function compra(e) {
   e.preventDefault();
   let productosComprados = document.getElementsByClassName('nombre');
   let precioDeProductos = document.getElementsByClassName('precio');
-  
+ 
   let prodcomp = [];
   let preprod = [];
   for (elemento of productosComprados) {
@@ -227,14 +227,15 @@ $('#comprar').click(function compra(e) {
     prodcomp.push(e);
   }
   for (elem of precioDeProductos) {
-    let p = elem.innerHTML;
+    let p = elem.innerHTML.slice(1);
     preprod.push(p);
   }
+  
   sessionStorage.setItem('productos', JSON.stringify(prodcomp));
   sessionStorage.setItem('precios', JSON.stringify(preprod));
 
   let tbody = $('tbody')[0];
-  console.log(tbody.hasChildNodes('tr'))
+  
   if (tbody.hasChildNodes('tr')) {
     window.location = './compra.html';
   } else {
