@@ -170,6 +170,8 @@ header .barraMenu {
       padding-top: 40px;
       justify-content: center; }
       .dark #cajaproductos .formulario .formBuscador input {
+        background-color: #161616;
+        color: #ffffff;
         width: 50%; }
       .dark #cajaproductos .formulario .formBuscador #btnBuscar {
         width: 8%;
