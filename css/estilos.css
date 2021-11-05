@@ -109,6 +109,7 @@ header .barraMenu {
       background: #ffffff;
       color: #4e4e4e; }
       header .barraMenu .switch.ligth::after {
+        background: #1d2233;
         right: 0;
         left: unset; }
     header .barraMenu .switch .sol {
