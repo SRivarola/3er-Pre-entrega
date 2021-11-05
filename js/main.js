@@ -262,6 +262,7 @@ $.ajax({
       let img3 = document.createElement("img");
       img3.setAttribute("src", response.photos[2].src.large);
       $(".foto3").append(img3);
+
     }
   },
 });

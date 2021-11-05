@@ -23,15 +23,14 @@
 }
 
 .fotosIndex{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 800px;
+    margin: 0 auto;
     height: 350px;
     overflow-y: hidden;
+    gap: 10px;
     .carousel-item{
         img{
             width: 800px;
-            
         }
     }
 }
