@@ -23,38 +23,57 @@
 }
 
 .fotosIndex{
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    height: 350px;
+    overflow-y: hidden;
+    .carousel-item{
+        img{
+            width: 800px;
+            
+        }
+    }
 }
 
 #cajaproductos{
     width: 95%;
-    margin-left: 20px;
-    .formBuscador{
-        margin-top: 30px;
-        margin-left: 90px;
+    margin: 0 auto;
+    .formulario{
+        background-color: #dbdbdb;
         width: 95%;
-        #btnBuscar{
-            padding-top: 6.5px;
-            padding-bottom: 6.5px;
-            padding-left: 9px;
-            padding-right: 9px;
-            border-radius: 4px;
-            color: #000000;
-            background-color: #66ff00;
-            border: 1px solid #2f7402;
-            &:hover{
-                background-color: #5de900;
+        height: 100px;
+        margin: 0 auto;
+        .formBuscador{
+            padding-top: 40px;
+            justify-content: center;
+            input{
+                width: 50%;
+            }
+            #btnBuscar{
+                width: 8%;
+                margin-left: 10px;
+                padding-top: 6.5px;
+                padding-bottom: 6.5px;
+                padding-left: 9px;
+                padding-right: 9px;
+                border-radius: 4px;
+                color: #000000;
+                background-color: #66ff00;
+                border: 1px solid #2f7402;
+                &:hover{
+                    background-color: #5de900;
+                }
             }
         }
     }
+    
     .productosVarios{
         width: 95%;
         margin-top: 30px;
         margin-bottom: 30px;
         height: auto;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         background-color: #dbdbdb;
         display: grid;
         grid-template-columns: 15% 85%;
