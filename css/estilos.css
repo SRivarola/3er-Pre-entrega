@@ -9,9 +9,14 @@
   font-family: LatamSans;
   src: url(Fuentes/LatamSans-Regular.otf); }
 
-body {
+.dark {
   background-color: #000000;
   color: #ffffff;
+  font-family: LatamSans; }
+
+.ligth {
+  background-color: #ffffff;
+  color: #000000;
   font-family: LatamSans; }
 
 header .barraMenu {
@@ -78,6 +83,50 @@ header .barraMenu {
         text-align: right; }
       header .barraMenu .dropdown .dropdown-menu li button {
         width: 100%; }
+  header .barraMenu .switch {
+    margin-right: 10px;
+    background: #1d2233;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none; }
+    header .barraMenu .switch::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      background: #ffffff;
+      top: 0;
+      left: 0;
+      right: unset;
+      border-radius: 100px;
+      transition: 0.3s ease all;
+      box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
+    header .barraMenu .switch.ligth {
+      background: #ffffff;
+      color: #4e4e4e; }
+      header .barraMenu .switch.ligth::after {
+        right: 0;
+        left: unset; }
+    header .barraMenu .switch .sol {
+      margin: 5px;
+      width: 20px;
+      height: 20px;
+      line-height: 30px;
+      display: block;
+      background: none;
+      color: #4e4e4e; }
+    header .barraMenu .switch .luna {
+      margin: 5px;
+      width: 20px;
+      height: 20px;
+      line-height: 30px;
+      display: block;
+      background: none;
+      color: #ffffff; }
 
 .logo .techoCasa {
   margin-top: 30px;
@@ -108,20 +157,20 @@ header .barraMenu {
   .fotosIndex .carousel-item img {
     width: 800px; }
 
-#cajaproductos {
+.dark #cajaproductos {
   width: 95%;
   margin: 0 auto; }
-  #cajaproductos .formulario {
+  .dark #cajaproductos .formulario {
     background-color: #dbdbdb;
     width: 95%;
     height: 100px;
     margin: 0 auto; }
-    #cajaproductos .formulario .formBuscador {
+    .dark #cajaproductos .formulario .formBuscador {
       padding-top: 40px;
       justify-content: center; }
-      #cajaproductos .formulario .formBuscador input {
+      .dark #cajaproductos .formulario .formBuscador input {
         width: 50%; }
-      #cajaproductos .formulario .formBuscador #btnBuscar {
+      .dark #cajaproductos .formulario .formBuscador #btnBuscar {
         width: 8%;
         margin-left: 10px;
         padding-top: 6.5px;
@@ -132,9 +181,9 @@ header .barraMenu {
         color: #000000;
         background-color: #66ff00;
         border: 1px solid #2f7402; }
-        #cajaproductos .formulario .formBuscador #btnBuscar:hover {
+        .dark #cajaproductos .formulario .formBuscador #btnBuscar:hover {
           background-color: #5de900; }
-  #cajaproductos .productosVarios {
+  .dark #cajaproductos .productosVarios {
     width: 95%;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -143,15 +192,15 @@ header .barraMenu {
     background-color: #dbdbdb;
     display: grid;
     grid-template-columns: 15% 85%; }
-    #cajaproductos .productosVarios .barraLateral {
+    .dark #cajaproductos .productosVarios .barraLateral {
       height: 100%;
       padding-top: 20px;
       padding-left: 25px;
       color: #000000; }
-      #cajaproductos .productosVarios .barraLateral .titulo {
+      .dark #cajaproductos .productosVarios .barraLateral .titulo {
         margin-top: 20px;
         margin-bottom: 10px; }
-      #cajaproductos .productosVarios .barraLateral .botonForm {
+      .dark #cajaproductos .productosVarios .barraLateral .botonForm {
         padding-top: 6.5px;
         padding-bottom: 6.5px;
         padding-left: 9px;
@@ -160,29 +209,29 @@ header .barraMenu {
         color: #000000;
         background-color: #66ff00;
         border: 1px solid #2f7402; }
-        #cajaproductos .productosVarios .barraLateral .botonForm:hover {
+        .dark #cajaproductos .productosVarios .barraLateral .botonForm:hover {
           background-color: #5de900; }
-    #cajaproductos .productosVarios .productos {
+    .dark #cajaproductos .productosVarios .productos {
       margin: 25px;
       display: grid;
       grid-template-columns: 33% 33% 33%; }
-      #cajaproductos .productosVarios .productos .card {
+      .dark #cajaproductos .productosVarios .productos .card {
         margin: 10px; }
-        #cajaproductos .productosVarios .productos .card:hover {
+        .dark #cajaproductos .productosVarios .productos .card:hover {
           transform: scale(1.03);
           transition: 1000ms; }
-        #cajaproductos .productosVarios .productos .card .tituloFoto {
+        .dark #cajaproductos .productosVarios .productos .card .tituloFoto {
           color: #000000;
           text-align: center;
           padding-top: 5px; }
-        #cajaproductos .productosVarios .productos .card .descripcion {
+        .dark #cajaproductos .productosVarios .productos .card .descripcion {
           display: inline-flex;
           margin-bottom: 5px; }
-          #cajaproductos .productosVarios .productos .card .descripcion .textoDescripcion {
+          .dark #cajaproductos .productosVarios .productos .card .descripcion .textoDescripcion {
             padding-left: 25px;
             padding-top: 8px;
             color: #000000; }
-          #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar {
+          .dark #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar {
             padding-top: 6.5px;
             padding-bottom: 6.5px;
             padding-left: 10px;
@@ -193,7 +242,95 @@ header .barraMenu {
             margin-left: 65px;
             height: 40px;
             border: 1px solid #2f7402; }
-            #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar:hover {
+            .dark #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar:hover {
+              background-color: #5de900; }
+
+body #cajaproductos {
+  width: 95%;
+  margin: 0 auto; }
+  body #cajaproductos .formulario {
+    background-color: #161616;
+    width: 95%;
+    height: 100px;
+    margin: 0 auto; }
+    body #cajaproductos .formulario .formBuscador {
+      padding-top: 40px;
+      justify-content: center; }
+      body #cajaproductos .formulario .formBuscador input {
+        width: 50%; }
+      body #cajaproductos .formulario .formBuscador #btnBuscar {
+        width: 8%;
+        margin-left: 10px;
+        padding-top: 6.5px;
+        padding-bottom: 6.5px;
+        padding-left: 9px;
+        padding-right: 9px;
+        border-radius: 4px;
+        color: #000000;
+        background-color: #66ff00;
+        border: 1px solid #2f7402; }
+        body #cajaproductos .formulario .formBuscador #btnBuscar:hover {
+          background-color: #5de900; }
+  body #cajaproductos .productosVarios {
+    width: 95%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #161616;
+    display: grid;
+    grid-template-columns: 15% 85%; }
+    body #cajaproductos .productosVarios .barraLateral {
+      height: 100%;
+      padding-top: 20px;
+      padding-left: 25px;
+      color: #ffffff; }
+      body #cajaproductos .productosVarios .barraLateral .titulo {
+        margin-top: 20px;
+        margin-bottom: 10px; }
+      body #cajaproductos .productosVarios .barraLateral .botonForm {
+        padding-top: 6.5px;
+        padding-bottom: 6.5px;
+        padding-left: 9px;
+        padding-right: 9px;
+        border-radius: 4px;
+        color: #000000;
+        background-color: #66ff00;
+        border: 1px solid #2f7402; }
+        body #cajaproductos .productosVarios .barraLateral .botonForm:hover {
+          background-color: #5de900; }
+    body #cajaproductos .productosVarios .productos {
+      margin: 25px;
+      display: grid;
+      grid-template-columns: 33% 33% 33%; }
+      body #cajaproductos .productosVarios .productos .card {
+        margin: 10px; }
+        body #cajaproductos .productosVarios .productos .card:hover {
+          transform: scale(1.03);
+          transition: 1000ms; }
+        body #cajaproductos .productosVarios .productos .card .tituloFoto {
+          color: #000000;
+          text-align: center;
+          padding-top: 5px; }
+        body #cajaproductos .productosVarios .productos .card .descripcion {
+          display: inline-flex;
+          margin-bottom: 5px; }
+          body #cajaproductos .productosVarios .productos .card .descripcion .textoDescripcion {
+            padding-left: 25px;
+            padding-top: 8px;
+            color: #000000; }
+          body #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar {
+            padding-top: 6.5px;
+            padding-bottom: 6.5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 4px;
+            color: #000000;
+            background-color: #66ff00;
+            margin-left: 65px;
+            height: 40px;
+            border: 1px solid #2f7402; }
+            body #cajaproductos .productosVarios .productos .card .descripcion .botonAgregar:hover {
               background-color: #5de900; }
 
 .textoApi {

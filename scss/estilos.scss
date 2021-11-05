@@ -9,9 +9,15 @@
     font-family: LatamSans;
     src: url(Fuentes/LatamSans-Regular.otf);
 }
-body{
+.dark{
     background-color: #000000;
     color: #ffffff;
+    font-family: LatamSans;
+}
+
+.ligth{
+    background-color: #ffffff;
+    color: #000000;
     font-family: LatamSans;
 }
 @import "nav";

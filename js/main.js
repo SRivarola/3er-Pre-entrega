@@ -21,6 +21,13 @@ let tiposDeMarca = [
   "remington",
 ];
 
+//dark o ligth mode
+const btnSwitch = document.querySelector('#switch');
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('ligth');
+});
+
 // Clase de Productos y su constructor.
 class Productos {
   constructor(nombre, marca) {
