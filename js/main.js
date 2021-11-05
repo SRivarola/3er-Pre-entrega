@@ -254,13 +254,13 @@ $.ajax({
     if (state === 'success') {
       // console.log(response)
       let img1 = document.createElement("img");
-      img1.setAttribute("src", response.photos[0].src.medium);
+      img1.setAttribute("src", response.photos[0].src.large);
       $(".foto1").append(img1);
       let img2 = document.createElement("img");
-      img2.setAttribute("src", response.photos[1].src.medium);
+      img2.setAttribute("src", response.photos[1].src.large);
       $(".foto2").append(img2);
       let img3 = document.createElement("img");
-      img3.setAttribute("src", response.photos[2].src.medium);
+      img3.setAttribute("src", response.photos[2].src.large);
       $(".foto3").append(img3);
     }
   },
