@@ -1,3 +1,4 @@
+//Usando el modo oscuro o claro segun quedo fijado en la pagina principal.
 let modo = JSON.parse(localStorage.getItem('modo'));
 if (modo != '' && modo != null) {
     let agregarModo = document.getElementsByTagName('body')[0].classList.add(modo);
@@ -133,7 +134,7 @@ function nombreEmpresa(e){
     }
 }
 
-
+//Clase y constructor para los productos
 class Producto {
     constructor(id, nombre, precio) {
         this.id = id;

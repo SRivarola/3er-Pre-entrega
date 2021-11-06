@@ -1,4 +1,3 @@
-let modo = JSON.parse(localStorage.getItem('modo'));
 let productos = JSON.parse(sessionStorage.getItem('productos'));
 let precios = JSON.parse(sessionStorage.getItem('precios'));
 let contador = 0;
@@ -6,10 +5,14 @@ let contadorDos = 0;
 let subtotal = 0;
 let precioParseado = [];
 
+//Usando el modo oscuro o claro segun quedo fijado en la pagina principal.
+let modo = JSON.parse(localStorage.getItem('modo'));
 if (modo != '' && modo != null) {
     let agregarModo = document.getElementsByTagName('body')[0].classList.add(modo);
 }
 
+
+//Armando la tabla de productos segun los tenemos guardados en el storage.
 for (item of precios) {
     precioParseado.push(Number(item));
     contadorDos = contadorDos + 1;
@@ -42,6 +45,7 @@ total = subtotal * 1.21;
 let precioTotalTexto = document.getElementsByClassName('total');
 precioTotalTexto[0].innerHTML = `$${total}`
 
+//Funcion para efectivizar la compra.
 $('.finalizar').click(function procesar(e) {
     e.preventDefault();
     let contador3 = 0;

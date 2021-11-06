@@ -91,6 +91,7 @@ $('#btnBuscar').click(function buscar(e) {
       e.style.display = "flex"
   }
 
+  //para que tambien encuentre aunque la palabra este incompleta!!
   let busquedaP = '';
   let busquedaM = '';
   for (producto of tiposDeProductos) {
@@ -205,6 +206,7 @@ $('.botonAgregar').click(function carrito(e) {
  
 });
 
+//eliminando productos del carrito
 function eliminarProducto () {
   $('.btnEliminar').click(function eliminar(e) {
     e.preventDefault();
@@ -214,8 +216,8 @@ function eliminarProducto () {
     elim.remove();
     
     let contEnCarrito = document.getElementById('contador');
-    contador = contador - 1;
-    contEnCarrito.innerHTML = contador;
+    contador = contador - 1;   
+    contEnCarrito.innerHTML = contador;  //actualuzando el contador.
 
     let arrayDePrecios2 = [];
     let precios = document.getElementsByClassName('precio');
@@ -256,6 +258,7 @@ $('#vaciarCarrito').click(function vaciar(e) {
   }
 })
 
+//Funcion para pasar al formulario de compra con los productos seleccionados!
 $('#comprar').click(function compra(e) {
   e.preventDefault();
   let productosComprados = document.getElementsByClassName('nombre');
