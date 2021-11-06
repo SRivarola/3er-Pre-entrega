@@ -21,6 +21,15 @@ let tiposDeMarca = [
   "remington",
 ];
 
+// for (marca of tiposDeProductos) {
+//   let encontrar = marca.includes(buscado.value.toLowerCase());
+//   console.log(encontrar)
+//   if (encontrar == true) {
+//     console.log(this.marca)
+//     return this.marca
+//   }
+// }
+
 let modo = JSON.parse(localStorage.getItem('modo'));
 if (modo != null && modo != ''){
   document.getElementsByTagName('body')[0].classList.add(modo);
@@ -81,9 +90,29 @@ $('#btnBuscar').click(function buscar(e) {
   for (e of reset) {
       e.style.display = "flex"
   }
-  //filtro por marca
-  if (tiposDeMarca.includes(buscado.value.toLowerCase())) {
-    let filtroBuscado = arrayDeProductos.filter(x => x.marca != buscado.value.toLowerCase());
+
+  let busquedaP = '';
+  let busquedaM = '';
+  for (producto of tiposDeProductos) {
+    let encontrar = producto.includes(buscado.value.toLowerCase());
+    console.log(encontrar)
+    if (encontrar == true) {
+      console.log(producto)
+      busquedaP = producto;
+    } 
+  }
+  for (marca of tiposDeMarca) {
+    let encontrar = marca.includes(buscado.value.toLowerCase());
+    console.log(encontrar)
+    if (encontrar == true) {
+      console.log(marca)
+      busquedaM = marca;
+    } 
+  }
+
+  // filtro por marca
+  if (busquedaM != '') {
+    let filtroBuscado = arrayDeProductos.filter(x => x.marca != busquedaM);
     for (prod of filtroBuscado) {
       let productosClass = document.querySelectorAll(`.${prod.marca}`);
       for (prod of productosClass) {
@@ -91,8 +120,8 @@ $('#btnBuscar').click(function buscar(e) {
       }
     }
   //filtro por nombre
-  } else if (tiposDeProductos.includes(buscado.value.toLowerCase())) {
-    let filtroBuscado = arrayDeProductos.filter(x => x.nombre != buscado.value.toLowerCase());
+  } else if (busquedaP != '') {
+    let filtroBuscado = arrayDeProductos.filter(x => x.nombre != busquedaP);
     for (prod of filtroBuscado) {
       let productosClass = document.querySelectorAll(`.${prod.nombre}`);
       for (prod of productosClass) {
