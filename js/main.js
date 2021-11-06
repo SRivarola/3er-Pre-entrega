@@ -21,11 +21,18 @@ let tiposDeMarca = [
   "remington",
 ];
 
-//dark o ligth mode
+let modo = JSON.parse(localStorage.getItem('modo'));
+if (modo != null && modo != ''){
+  document.getElementsByTagName('body')[0].classList.add(modo);
+}
+
+//boton dark o ligth mode
 const btnSwitch = document.querySelector('#switch');
 btnSwitch.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   btnSwitch.classList.toggle('ligth');
+  let mode = document.getElementsByTagName('body')[0].classList.value;
+  localStorage.setItem('modo', JSON.stringify(mode));
 });
 
 // Clase de Productos y su constructor.
@@ -240,7 +247,7 @@ $('#comprar').click(function compra(e) {
   sessionStorage.setItem('precios', JSON.stringify(preprod));
 
   let tbody = $('tbody')[0];
-  
+
   if (tbody.hasChildNodes('tr')) {
     window.location = './compra.html';
   } else {

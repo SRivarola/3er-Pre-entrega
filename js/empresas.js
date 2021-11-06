@@ -1,3 +1,8 @@
+let modo = JSON.parse(localStorage.getItem('modo'));
+if (modo != '' && modo != null) {
+    let agregarModo = document.getElementsByTagName('body')[0].classList.add(modo);
+}
+
 let loguear = document.getElementById('logIn');
 loguear.addEventListener('click', nombreEmpresa);
 

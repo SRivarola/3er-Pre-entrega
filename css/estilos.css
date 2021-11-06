@@ -170,8 +170,7 @@ header .barraMenu {
       padding-top: 40px;
       justify-content: center; }
       .dark #cajaproductos .formulario .formBuscador input {
-        background-color: #161616;
-        color: #ffffff;
+        border: #161616 1px solid;
         width: 50%; }
       .dark #cajaproductos .formulario .formBuscador #btnBuscar {
         width: 8%;
@@ -405,75 +404,91 @@ body #cajaproductos {
       .mainEmpresas #productosPorEmpresa .tarjeta .costoAlto {
         background-color: #ec0909; }
 
-.mainCompra {
+.dark .mainCompra form input {
+  background-color: #ffffff;
+  color: #000000; }
+
+.dark .mainCompra .textoApiF {
+  color: #000000; }
+  .dark .mainCompra .textoApiF .datosPersonales {
+    background-color: #ffffff;
+    border-bottom: 1px #161616 solid; }
+    .dark .mainCompra .textoApiF .datosPersonales .list .table {
+      background-color: #ffffff;
+      color: black; }
+
+body .mainCompra {
   margin-top: 120px; }
-  .mainCompra form {
+  body .mainCompra form {
     width: 70%; }
-    .mainCompra form .boton {
+    body .mainCompra form input {
+      border: #161616 2px solid; }
+    body .mainCompra form .boton {
       text-align: right; }
-      .mainCompra form .boton .btn {
+      body .mainCompra form .boton .btn {
         background-color: #f32323;
         border: none; }
-        .mainCompra form .boton .btn:hover {
+        body .mainCompra form .boton .btn:hover {
           background-color: #d60f0f; }
-    .mainCompra form .listado {
+    body .mainCompra form .listado {
       display: flex;
       justify-content: right; }
-      .mainCompra form .listado table {
+      body .mainCompra form .listado table {
         background-color: #161616;
         border-radius: 5px;
         color: #ffffff;
         width: 50%; }
-        .mainCompra form .listado table .precio {
+        body .mainCompra form .listado table .precio {
           text-align: right; }
-        .mainCompra form .listado table thead th {
+        body .mainCompra form .listado table thead th {
           color: #66ff00; }
-        .mainCompra form .listado table tfoot .textoTablaST {
+        body .mainCompra form .listado table tfoot .textoTablaST {
           text-align: right;
           color: #969696;
           border-bottom: none; }
-        .mainCompra form .listado table tfoot .textoTablaT {
+        body .mainCompra form .listado table tfoot .textoTablaT {
           text-align: right;
           color: white;
           border-bottom: none; }
-        .mainCompra form .listado table tfoot .subtotal {
+        body .mainCompra form .listado table tfoot .subtotal {
           color: grey;
           text-align: right;
           border-top: 2px white solid; }
-        .mainCompra form .listado table tfoot .total {
+        body .mainCompra form .listado table tfoot .total {
           text-align: right;
           color: #66ff00;
           border-top: white 2px solid;
           border-bottom: none; }
-  .mainCompra .textoApiF {
+  body .mainCompra .textoApiF {
     color: #000000;
     margin-top: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-content: center; }
-    .mainCompra .textoApiF .datosPersonales {
+    body .mainCompra .textoApiF .datosPersonales {
       width: 25%;
       background-color: #ffffff;
       margin: 0 auto;
-      border-bottom: 1px #161616 solid;
+      border: 2px #161616 solid;
       border-radius: 5px 5px 0px 0px; }
-      .mainCompra .textoApiF .datosPersonales h3 {
+      body .mainCompra .textoApiF .datosPersonales h3 {
         margin: 5px;
         padding: 5px;
         font-size: 16px; }
-    .mainCompra .textoApiF .list {
+    body .mainCompra .textoApiF .list {
       display: flex;
       justify-content: space-around; }
-      .mainCompra .textoApiF .list .table {
+      body .mainCompra .textoApiF .list .table {
+        border: 2px #161616 solid;
+        border-top: none;
         background-color: #ffffff;
         width: 25%;
         color: black;
-        border-radius: 0px 0px 5px 5px;
         margin-bottom: 30px; }
-        .mainCompra .textoApiF .list .table .precioP, .mainCompra .textoApiF .list .table .subtotalF, .mainCompra .textoApiF .list .table .totalF, .mainCompra .textoApiF .list .table .textoTablaT, .mainCompra .textoApiF .list .table .textoTablaST, .mainCompra .textoApiF .list .table .precio {
+        body .mainCompra .textoApiF .list .table .precioP, body .mainCompra .textoApiF .list .table .subtotalF, body .mainCompra .textoApiF .list .table .totalF, body .mainCompra .textoApiF .list .table .textoTablaT, body .mainCompra .textoApiF .list .table .textoTablaST, body .mainCompra .textoApiF .list .table .precio {
           text-align: right; }
-        .mainCompra .textoApiF .list .table .nombre, .mainCompra .textoApiF .list .table .producto {
+        body .mainCompra .textoApiF .list .table .nombre, body .mainCompra .textoApiF .list .table .producto {
           text-align: left; }
-        .mainCompra .textoApiF .list .table .totalF, .mainCompra .textoApiF .list .table .textoTablaT {
+        body .mainCompra .textoApiF .list .table .totalF, body .mainCompra .textoApiF .list .table .textoTablaT {
           border-bottom: none; }

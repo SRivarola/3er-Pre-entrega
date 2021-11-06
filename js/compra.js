@@ -1,9 +1,14 @@
+let modo = JSON.parse(localStorage.getItem('modo'));
 let productos = JSON.parse(sessionStorage.getItem('productos'));
 let precios = JSON.parse(sessionStorage.getItem('precios'));
 let contador = 0;
 let contadorDos = 0;
 let subtotal = 0;
 let precioParseado = [];
+
+if (modo != '' && modo != null) {
+    let agregarModo = document.getElementsByTagName('body')[0].classList.add(modo);
+}
 
 for (item of precios) {
     precioParseado.push(Number(item));
@@ -72,8 +77,8 @@ $('.finalizar').click(function procesar(e) {
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                  <th class="textoTablaST">Subtotal:</td>
-                                  <th class="subtotalF"></td>
+                                  <td class="textoTablaST">Subtotal:</td>
+                                  <td class="subtotalF"></td>
                                 </tr>
                                 <tr>
                                   <th class="textoTablaT">TOTAL:</td>
